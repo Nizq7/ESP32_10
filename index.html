@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Smart Home Control - 10 Devices</title>
+    <title>Smart Home Control - 9 Devices</title>
     <style>
         * {
             margin: 0;
@@ -84,7 +84,7 @@
 
         .devices-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -413,7 +413,7 @@
     <div class="container">
         <!-- Header Section -->
         <div class="header fade-in">
-            <h1>Smart Home Control - 10 Devices</h1>
+            <h1>Smart Home Control - 9 Devices</h1>
         </div>
 
         <!-- System Status -->
@@ -447,7 +447,7 @@
             </div>
         </div>
 
-        <!-- Devices Grid - 10 Devices -->
+        <!-- Devices Grid - 9 Devices -->
         <div class="devices-grid">
             <!-- Device 1 -->
             <div class="device-card fade-in" style="animation-delay: 0.2s" id="relayCard1" tabindex="0" role="button" aria-pressed="false">
@@ -547,17 +547,6 @@
                 </label>
                 <div class="device-status" id="status9">OFF</div>
             </div>
-
-            <!-- Device 10 -->
-            <div class="device-card fade-in" style="animation-delay: 0.65s" id="relayCard10" tabindex="0" role="button" aria-pressed="false">
-                <div class="device-icon">💡</div>
-                <div class="device-name">Light 10</div>
-                <label class="switch">
-                    <input type="checkbox" id="relay10" />
-                    <span class="slider"></span>
-                </label>
-                <div class="device-status" id="status10">OFF</div>
-            </div>
         </div>
 
         <!-- Log Toggle Button -->
@@ -577,7 +566,7 @@
         <div class="welcome-section fade-in" style="animation-delay: 0.8s; text-align: center;">
             <div class="location">MQTT + RainMaker Integrated System</div>
             <div style="font-size: 12px; opacity: 0.6; margin-top: 8px;">
-                Control 10 devices through both MQTT and RainMaker
+                Control 9 devices through both MQTT and RainMaker
             </div>
         </div>
     </div>
@@ -602,7 +591,7 @@
 
         let mqttClient = null;
         let isConnected = false;
-        const numRelays = 10;  // Updated to 10
+        const numRelays = 9;  // Updated to 9
         let relayStates = Array(numRelays).fill(false);
         let isLogVisible = false;
         let isProcessing = false;
@@ -1109,7 +1098,7 @@
 
         // Initialize on page load
         window.addEventListener('load', () => {
-            addLog('Page loaded, initializing MQTT connection for 10 devices...');
+            addLog('Page loaded, initializing MQTT connection for 9 devices...');
             setupEventListeners();
             connectMQTT();
             startReconnectTimer();
